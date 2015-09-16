@@ -1,0 +1,35 @@
+{
+  "name": "Pingbullet",
+  "description": "Send yourself regular pings via Pushbullet.",
+  "keywords": [
+    "productivity"
+  ],
+  "env": {
+    "PUSHBULLET_ACCESS_TOKEN": {
+      "description": "Access token from Pushbullet Account Settings page."
+    },
+    "PUSH_TITLE": {
+      "description": "Title of the message to send.",
+      "required": false
+    },
+    "PUSH_BODY": {
+      "description": "Body of the message to send.",
+      "required": false
+    },
+    "PUSH_URL": {
+      "description": "URL of the message to send. If present, sends a `link` message.",
+      "required": false
+    },
+    "ACTIVE": {
+      "description": "Only send messages if set to `true`",
+      "value": "true"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "No web processes should run, only scheduled jobs.",
+      "value": "0"
+    }
+  },
+  "addons": [
+    "scheduler:standard"
+  ]
+}
